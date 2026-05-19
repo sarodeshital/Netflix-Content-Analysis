@@ -1,7 +1,7 @@
 """
 Netflix Content Analysis - EDA Script
 ======================================
-Author  : Your Name
+Author  : Shital Sarode
 Dataset : Netflix Movies and TV Shows (Kaggle)
 Purpose : Exploratory Data Analysis on 8,800+ Netflix titles
 
