@@ -1,7 +1,7 @@
 # Netflix EDA — Key Findings Report
 
 **Dataset:** 8,807 Netflix titles (2008–2021)  
-**Analysis Date:** 2024  
+**Analysis Date:** 2026
 **Tools:** Python, Pandas, Matplotlib, SQLite
 
 ---
