@@ -52,10 +52,10 @@ def load_data(path: str) -> pd.DataFrame:
     print("="*60)
 
     df = pd.read_csv(path)
-    print(f"\n✅ Loaded {len(df):,} rows × {df.shape[1]} columns")
-    print(f"\n📋 Columns:\n{list(df.columns)}")
-    print(f"\n🔍 Data types:\n{df.dtypes}")
-    print(f"\n❓ Missing values:\n{df.isnull().sum()}")
+    print(f"\n Loaded {len(df):,} rows × {df.shape[1]} columns")
+    print(f"\n Columns:\n{list(df.columns)}")
+    print(f"\n Data types:\n{df.dtypes}")
+    print(f"\n Missing values:\n{df.isnull().sum()}")
     return df
 
 
@@ -100,7 +100,7 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     print(f"  Rows removed         : {original_rows - len(df):,}")
 
     df.to_csv(CLEAN_PATH, index=False)
-    print(f"\n✅ Cleaned data saved → {CLEAN_PATH}")
+    print(f"\n Cleaned data saved → {CLEAN_PATH}")
     return df
 
 
@@ -236,7 +236,7 @@ def plot_top_countries(df: pd.DataFrame):
     path = f"{VIZ_DIR}/04_top_countries.png"
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"  Saved → {path}")
+    print(f"  Saved  {path}")
 
 
 def plot_rating_distribution(df: pd.DataFrame):
@@ -404,7 +404,7 @@ def run_sql_analysis(df: pd.DataFrame):
     }
 
     for title, query in queries.items():
-        print(f"\n📊 {title}")
+        print(f"\n {title}")
         print("-" * 40)
         result = pd.read_sql_query(query, conn)
         print(result.to_string(index=False))
@@ -439,7 +439,7 @@ def print_summary(df: pd.DataFrame):
 # ══════════════════════════════════════════════════════════════════════════════
 def main():
     if not os.path.exists(DATA_PATH):
-        print(f"\n❌ Dataset not found at '{DATA_PATH}'")
+        print(f"\n Dataset not found at '{DATA_PATH}'")
         print("   Download from: https://www.kaggle.com/datasets/shivamb/netflix-shows")
         print("   Place 'netflix_titles.csv' inside the 'data/' folder.")
         return
@@ -463,7 +463,7 @@ def main():
     run_sql_analysis(df)
 
     print("\n" + "="*60)
-    print("  ✅ ANALYSIS COMPLETE")
+    print("  ANALYSIS COMPLETE")
     print(f"  All charts saved in: ./{VIZ_DIR}/")
     print("="*60 + "\n")
 
